@@ -1,14 +1,16 @@
 import React from 'react';
 import { Outlet } from 'react-router';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Mainlayouts = () => {
     return (
-        <div>
-            <Header></Header>
-            <div className='max-w-7xl mx-auto'>
-                <Outlet></Outlet>
-            </div>
+        <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">
+                <Outlet />
+            </main>
+            <Footer />
         </div>
     );
 };
